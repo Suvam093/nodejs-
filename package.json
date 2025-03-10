@@ -1,0 +1,19 @@
+{
+  "name": "2nd_express",
+  "version": "1.0.0",
+  "description": "learning basics of express.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "suvam",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.10.2",
+    "nodemon": "^3.1.9"
+  }
+}
