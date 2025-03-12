@@ -5,9 +5,9 @@ require('dotenv').config();
 const mongoURL = process.env.DB_URL;
 
 mongoose.connect(process.env.DB_URL, {
-    serverSelectionTimeoutMS: 5000,  // Helps prevent infinite retry loops
-    tls: true,                      // Forces TLS connection
-    tlsAllowInvalidCertificates: true // Ignores SSL certificate issues
+    tls: true,
+    tlsAllowInvalidCertificates: true, // Ignore SSL certificate issues
+    serverSelectionTimeoutMS: 5000 // Prevents infinite retry loops
   })
 
 const db = mongoose.connection;
