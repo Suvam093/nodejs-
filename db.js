@@ -5,9 +5,9 @@ require('dotenv').config();
 const mongoURL = process.env.DB_URL;
 
 mongoose.connect(process.env.DB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    tlsAllowInvalidCertificates: true // Ignore TLS validation errors
+    serverSelectionTimeoutMS: 5000,  // Helps prevent infinite retry loops
+    tls: true,                      // Forces TLS connection
+    tlsAllowInvalidCertificates: true // Ignores SSL certificate issues
   })
 
 const db = mongoose.connection;
