@@ -16,8 +16,6 @@ app.get('/', (req, res) => {
 })
 
 
-
-
 const MenuRoutes = require('./Routes/MenuRoute')
 app.use('/menu', MenuRoutes)
 
